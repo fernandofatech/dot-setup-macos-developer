@@ -1,0 +1,25 @@
+# Gerado por fernando-moretes/platform. Não edite aqui: mude no orquestrador e
+# rode `make rollout`. É o que o Backstage (backstage.home.lab) lê deste repo.
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dot-setup-macos-developer
+  description: macOS developer workstation setup automation for repeatable engineering environments.
+  annotations:
+    github.com/project-slug: fernandofatech/dot-setup-macos-developer
+    backstage.io/source-location: url:https://github.com/fernandofatech/dot-setup-macos-developer
+    sonarqube.org/project-key: dot-setup-macos-developer
+  links:
+    - url: https://github.com/fernandofatech/dot-setup-macos-developer/actions
+      title: Actions
+      icon: github
+    - url: https://sonarqube.home.lab/dashboard?id=dot-setup-macos-developer
+      title: SonarQube
+    - url: https://defectdojo.home.lab/product?name=dot-setup-macos-developer
+      title: DefectDojo
+  tags: [config, ci-generic.yml]
+spec:
+  type: config
+  lifecycle: production
+  owner: group:plataforma
+  system: homelab
