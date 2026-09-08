@@ -7,12 +7,16 @@
  */
 workspace "dot-setup-macos-developer" "macOS developer workstation setup automation for repeatable engineering environments." {
 
+    configuration {
+        scope softwaresystem
+    }
+
     model {
         usuario = person "Usuário"
         sistema = softwareSystem "dot-setup-macos-developer" "macOS developer workstation setup automation for repeatable engineering environments." {
             app = container "Aplicação" "Descreva o que roda aqui" "ci-generic.yml"
         }
-        usuario -> sistema.app "Usa"
+        usuario -> sistema.app "Usa" "HTTPS"
     }
 
     views {
@@ -25,9 +29,19 @@ workspace "dot-setup-macos-developer" "macOS developer workstation setup automat
             autoLayout lr
         }
         styles {
-            element "Person" { shape person; background #08427b; color #ffffff }
-            element "Software System" { background #1168bd; color #ffffff }
-            element "Container" { background #438dd5; color #ffffff }
+            element "Person" {
+                shape person
+                background #08427b
+                color #ffffff
+            }
+            element "Software System" {
+                background #1168bd
+                color #ffffff
+            }
+            element "Container" {
+                background #438dd5
+                color #ffffff
+            }
         }
     }
 }
