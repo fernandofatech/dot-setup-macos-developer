@@ -7,8 +7,12 @@ metadata:
   description: "macOS developer workstation setup automation for repeatable engineering environments."
   annotations:
     github.com/project-slug: fernandofatech/dot-setup-macos-developer
-    backstage.io/source-location: url:https://github.com/fernandofatech/dot-setup-macos-developer
+    # URL da arvore com barra final: e dela que o TechDocs resolve `dir:.`;
+    # sem a barra ele sobe um nivel e pede api.github.com/repos/<dono> (404).
+    backstage.io/source-location: url:https://github.com/fernandofatech/dot-setup-macos-developer/tree/main/
     sonarqube.org/project-key: dot-setup-macos-developer
+    # TechDocs: mkdocs.yml + docs/ do proprio repositorio (rolados pelo platform)
+    backstage.io/techdocs-ref: dir:.
   links:
     - url: https://github.com/fernandofatech/dot-setup-macos-developer/actions
       title: Actions
